@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #e0ffe9 0, var(--bg-main) 45%, #ffffff 100%);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 7vw;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  color: rgb(56, 101, 56);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  padding:5px;
+  position: relative;
+  padding-bottom: 0.2rem;
+  color: var(--text-muted);
+  transition: color 0.18s ease;
+}
+a:hover{
+  border-radius:5px;
+  background-color: rgb(204, 231, 160);
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green-600), var(--green-800));
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--green-800);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.footer {
+  padding: 1.8rem 7vw 1.2rem;
+  background: #020817;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.1rem;
+}
+
+.footer-brand p {
+  max-width: 18rem;
+  font-size: 0.85rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(51, 65, 85, 0.9);
+  padding-top: 0.7rem;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .navbar {
+    padding-inline: 5vw;
+  }
+
+}
+
+body{
+  background-image: url("group.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+}
+.main-img{
+  display:flex;
+  align-items:flex-start;
+  opacity:0.5;
+}
