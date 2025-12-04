@@ -135,14 +135,51 @@ a:hover{
 
 }
 
-body{
-  background-image: url("group.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  
+
+.main{
+  position: relative;
+  text-align: center;
+  color: white;
 }
-.main-img{
-  display:flex;
-  align-items:flex-start;
-  opacity:0.5;
+
+video-container {
+    position: relative;
+    height: auto; 
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.video-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(0, 0, 0); 
+    font-size: 20px;  
+    text-align: center; 
+
+}
+
+@keyframes swooshIn {
+    from {
+        
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.swoosh-container {
+    animation-name: swooshIn;
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; 
+    animation-fill-mode: forwards; 
+    opacity: 0; 
 }
