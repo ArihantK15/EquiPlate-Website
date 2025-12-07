@@ -26,6 +26,7 @@ a {
 
 
 .navbar {
+  width:100%;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -152,7 +153,7 @@ video-container {
 
 .video-text {
     position: absolute;
-    top: 50%; 
+    top: 30%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     color: rgb(0, 0, 0); 
@@ -246,8 +247,12 @@ video-container {
 }
 
 .flip-box {
+  flex: 33.33%;
   float:left;
-  margin:50px;
+  margin-left:50px;
+  margin-top:10px;
+  margin-bottom:20px;
+  margin-right:50px;
   background-color: transparent;
   width: 400px;
   height: 400px;
@@ -296,7 +301,6 @@ video-container {
   transform: rotateY(180deg);
   height:400px;
   width:400px;
-  padding:8px;
 }
 
 ul{
@@ -304,8 +308,8 @@ ul{
 }
 
 .flip-box1 {
+  flex: 33.33%;
   float:right;
-  margin-left:10px;
   margin-top:10px;
   margin-bottom:20px;
   margin-right:50px;
@@ -357,14 +361,14 @@ ul{
   transform: rotateY(180deg);
   height:400px;
   width:400px;
-  padding:8px;
 }
+
 .flip-box2 {
-  margin-left:50px;
+  flex: 33.33%;
   margin-top:10px;
   margin-bottom:20px;
   margin-right:50px;
-  background-color: transparent;
+  background-color: black;
   width: 400px;
   height: 400px;
   border: 1px solid #f1f1f1;
@@ -411,5 +415,41 @@ ul{
   transform: rotateY(180deg);
   height:400px;
   width:400px;
-  padding:8px;
 }
+
+h5{
+  /* The Gradient Colors */
+  background: linear-gradient(to right, #0cef67, #16a24c);
+  
+  /* The Magic that clips it to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Makes the text fill transparent so the background shows through */
+  color: transparent;
+}
+.row{
+  display: flex;
+}
+
+.button a{
+  border-radius:8px; 
+  padding-right:50px;
+  padding-left:50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin:50px;
+  background-color: #137d3c;
+  font-size:32px;
+  animation:bounce 2s infinite;
+
+}
+.button a:hover{
+  animation:none;
+  background-color:#77d39a;
+}
+  @keyframes bounce{
+    0% { transform:translate(0);}
+    40% { transform:translateY(-20px);}
+
+  }
