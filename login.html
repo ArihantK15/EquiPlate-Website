@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiPlate - Login</title>
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --dark-green: #27ae60;
+            --accent-orange: #e67e22;
+            --light-gray: #f4f6f7;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            margin: 0;
+            
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+
+        
+        .main-content {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .login-card {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 2rem;
+            position: relative; 
+            z-index: 10;
+        }
+
+        .logo-area { text-align: center; margin-bottom: 2rem; }
+        .logo-area h1 { color: var(--dark-green); margin: 0; font-size: 2rem; }
+        .logo-area span { color: var(--accent-orange); }
+
+        
+        .role-tabs { display: flex; justify-content: space-between; margin-bottom: 1.5rem; background-color: #eee; border-radius: 25px; padding: 4px; }
+        .role-tab { flex: 1; padding: 10px 0; border: none; background: transparent; cursor: pointer; border-radius: 20px; font-weight: 600; color: #777; transition: all 0.3s ease; font-size: 0.85rem; }
+        .role-tab.active { background-color: white; color: var(--dark-green); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-color); font-weight: 500; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; transition: border-color 0.3s; }
+        .form-group input:focus { outline: none; border-color: var(--primary-green); }
+
+        .login-btn { width: 100%; padding: 12px; background-color: var(--dark-green); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; margin-top: 1rem; }
+        .login-btn:hover { background-color: var(--primary-green); }
+
+        .helper-links { text-align: center; margin-top: 1.5rem; font-size: 0.9rem; }
+        .helper-links a { color: var(--dark-green); text-decoration: none; }
+        #dynamic-welcome { text-align: center; color: #666; margin-bottom: 1rem; font-size: 0.95rem; }
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="nav-brand">
+      <img src="logo.png" alt="EquiPlate logo" class="logo" />
+      <span class="brand-name">EquiPlate</span>
+    </div>
+    <nav class="nav-links">
+      <a href="main.html">Home</a>
+      <a href="How_it_works.html">How it works</a>
+      <a href="#impact">About Us</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+    <div class="main-content">
+        <div class="login-card">
+            <div class="logo-area">
+                <h1>Equi<span>Plate</span></h1>
+            </div>
+
+            <div class="role-tabs">
+                <button class="role-tab active" onclick="selectRole('restaurant', this)">Restaurant</button>
+                <button class="role-tab" onclick="selectRole('transporter', this)">Transporter</button>
+                <button class="role-tab" onclick="selectRole('ngo', this)">NGO/Shelter</button>
+            </div>
+
+            <p id="dynamic-welcome">Login to manage surplus food donations.</p>
+
+            <form action="/login" method="POST">
+                <input type="hidden" id="user-role" name="role" value="restaurant">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="helper-links">
+                <p>Don't have an account? <a href="#">Register here</a></p>
+                <p><a href="#">Forgot Password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="brand-name">EquiPlate</span>
+        <p>Sharing surplus. Protecting the planet. Nourishing communities.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2025</span> EquiPlate. All rights reserved.</span>
+    </div>
+  </footer>
+
+    <script>
+        function selectRole(role, element) {
+            document.getElementById('user-role').value = role;
+            let tabs = document.querySelectorAll('.role-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            element.classList.add('active');
+            const welcomeText = document.getElementById('dynamic-welcome');
+            if(role === 'restaurant') welcomeText.textContent = "Login to manage surplus food donations.";
+            else if (role === 'transporter') welcomeText.textContent = "Login to view pickup routes and schedules.";
+            else if (role === 'ngo') welcomeText.textContent = "Login to request food and update inventory.";
+        }
+    </script>
+</body>
+</html>

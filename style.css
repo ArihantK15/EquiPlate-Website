@@ -34,7 +34,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0.9rem 7vw;
-  background: rgba(255, 255, 255, 0.93);
+  background:#035623;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
@@ -55,7 +55,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.04em;
   font-size: 1.1rem;
-  color: rgb(56, 101, 56);
+  color: white;
 }
 
 .nav-links {
@@ -69,12 +69,13 @@ a {
   padding:5px;
   position: relative;
   padding-bottom: 0.2rem;
-  color: var(--text-muted);
+  color: white;
   transition: color 0.18s ease;
 }
 a:hover{
   border-radius:5px;
-  background-color: rgb(204, 231, 160);
+  background-color: rgb(100, 131, 100);
+  padding:8px;
 }
 .nav-links a::after {
   content: "";
@@ -253,15 +254,15 @@ video-container {
   margin-top:10px;
   margin-bottom:20px;
   margin-right:50px;
-  background-color: transparent;
+  background-color: black;
   width: 400px;
   height: 400px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
   box-shadow: 0 20px 40px rgba(13, 67, 32, 0.12), 0 6px 12px rgba(0,0,0,0.08)
 }
 
-/* This container is needed to position the front and back side */
+
 .flip-box-inner {
   position: relative;
   width: 100%;
@@ -271,21 +272,21 @@ video-container {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+
 .flip-box-front {
   background-color: #ffffff;
   color: black;
@@ -293,10 +294,10 @@ video-container {
 
 }
 
-/* Style the back side */
+
 .flip-box-back {
   float:left;
-  background-color: rgb(157, 205, 131);
+  background-color: #035623;
   color: white;
   transform: rotateY(180deg);
   height:400px;
@@ -313,15 +314,15 @@ ul{
   margin-top:10px;
   margin-bottom:20px;
   margin-right:50px;
-  background-color: transparent;
+  background-color: black;
   width: 400px;
   height: 400px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
   box-shadow: 0 20px 40px rgba(13, 67, 32, 0.12), 0 6px 12px rgba(0,0,0,0.08)
 }
 
-/* This container is needed to position the front and back side */
+
 .flip-box-inner1 {
   position: relative;
   width: 100%;
@@ -331,21 +332,21 @@ ul{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-box1:hover .flip-box-inner1 {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+
 .flip-box-front1, .flip-box-back1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+
 .flip-box-front1 {
   background-color: #ffffff;
   color: black;
@@ -353,10 +354,10 @@ ul{
 
 }
 
-/* Style the back side */
+
 .flip-box-back1 {
   float:right;
-  background-color: rgb(157, 205, 131);
+  background-color: #035623;
   color: white;
   transform: rotateY(180deg);
   height:400px;
@@ -372,11 +373,10 @@ ul{
   width: 400px;
   height: 400px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
   box-shadow: 0 20px 40px rgba(13, 67, 32, 0.12), 0 6px 12px rgba(0,0,0,0.08)
 }
 
-/* This container is needed to position the front and back side */
 .flip-box-inner2 {
   position: relative;
   width: 100%;
@@ -386,21 +386,19 @@ ul{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box2:hover .flip-box-inner2 {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+
 .flip-box-front2, .flip-box-back2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-box-front2 {
   background-color: #ffffff;
   color: black;
@@ -408,9 +406,9 @@ ul{
 
 }
 
-/* Style the back side */
+
 .flip-box-back2 {
-  background-color: rgb(157, 205, 131);
+  background-color: #035623;
   color: white;
   transform: rotateY(180deg);
   height:400px;
@@ -418,27 +416,21 @@ ul{
 }
 
 h5{
-  /* The Gradient Colors */
-  background: linear-gradient(to right, #0cef67, #16a24c);
-  
-  /* The Magic that clips it to text */
-  -webkit-background-clip: text;
-  background-clip: text;
-  
-  /* Makes the text fill transparent so the background shows through */
-  color: transparent;
+  color: #035623;
 }
 .row{
   display: flex;
 }
 
 .button a{
+  color:white;
   border-radius:8px; 
   padding-right:50px;
   padding-left:50px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin:50px;
+  position: relative;
   background-color: #137d3c;
   font-size:32px;
   animation:bounce 2s infinite;
@@ -450,6 +442,34 @@ h5{
 }
   @keyframes bounce{
     0% { transform:translate(0);}
-    40% { transform:translateY(-20px);}
+    40% { transform:translateY(-15px);}
 
   }
+
+div.mycontainer {
+  width: 100%;
+  display: flex;
+  margin-right:50px;
+}
+
+.img img{
+  z-index:1;
+  height:30rem;
+  width: 880px;
+  margin:50px;
+  border-bottom-right-radius: 150px;
+  border-top-right-radius: 150px;
+}
+
+.img-text{
+  margin:140px 2px 2px 2px;
+  height:20rem;
+  background-color: transparent;
+  padding: 10px;
+  margin-right: 80px;
+  margin-left: 0px;
+  background-color:green;
+  z-index: 1;
+  font-size:24px;
+  text-align: center;
+}
