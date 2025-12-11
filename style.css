@@ -7,6 +7,7 @@
 }
 
 body {
+  color: #e9f7ee;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: radial-gradient(circle at top left, #e0ffe9 0, var(--bg-main) 45%, #ffffff 100%);
   color: var(--text-main);
@@ -24,78 +25,28 @@ a {
   color: inherit;
 }
 
-
-.navbar {
-  width:100%;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.9rem 7vw;
-  background:#035623;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-}
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.logo {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-}
-
-.brand-name {
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  font-size: 1.1rem;
-  color: white;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.75rem;
-  font-size: 0.95rem;
-}
-
-.nav-links a {
-  padding:5px;
-  position: relative;
-  padding-bottom: 0.2rem;
-  color: white;
-  transition: color 0.18s ease;
-}
-a:hover{
-  border-radius:5px;
-  background-color: rgb(100, 131, 100);
-  padding:8px;
-}
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--green-600), var(--green-800));
-  transition: width 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: var(--green-800);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
+    .navbar {
+      background: #035623;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      height: 40px;
+      margin-right: 10px;
+    }
 
 .footer {
   padding: 1.8rem 7vw 1.2rem;
@@ -248,6 +199,7 @@ video-container {
 }
 
 .flip-box {
+  border-radius: 15px;
   flex: 33.33%;
   float:left;
   margin-left:50px;
@@ -264,6 +216,7 @@ video-container {
 
 
 .flip-box-inner {
+  border-radius: 15px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -274,11 +227,13 @@ video-container {
 
 
 .flip-box:hover .flip-box-inner {
+  border-radius: 15px;
   transform: rotateY(180deg);
 }
 
 
 .flip-box-front, .flip-box-back {
+  border-radius: 15px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -288,6 +243,7 @@ video-container {
 
 
 .flip-box-front {
+  border-radius: 15px;
   background-color: #ffffff;
   color: black;
   border:none;
@@ -296,6 +252,7 @@ video-container {
 
 
 .flip-box-back {
+  border-radius: 15px;
   float:left;
   background-color: #035623;
   color: white;
@@ -309,6 +266,7 @@ ul{
 }
 
 .flip-box1 {
+  border-radius: 15px;
   flex: 33.33%;
   float:right;
   margin-top:10px;
@@ -324,6 +282,7 @@ ul{
 
 
 .flip-box-inner1 {
+  border-radius: 15px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -334,11 +293,13 @@ ul{
 
 
 .flip-box1:hover .flip-box-inner1 {
+  border-radius: 15px;
   transform: rotateY(180deg);
 }
 
 
 .flip-box-front1, .flip-box-back1 {
+  border-radius: 15px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -348,6 +309,7 @@ ul{
 
 
 .flip-box-front1 {
+  border-radius: 15px;
   background-color: #ffffff;
   color: black;
   border:none;
@@ -356,6 +318,7 @@ ul{
 
 
 .flip-box-back1 {
+  border-radius: 15px;
   float:right;
   background-color: #035623;
   color: white;
@@ -365,6 +328,7 @@ ul{
 }
 
 .flip-box2 {
+  border-radius: 15px;
   flex: 33.33%;
   margin-top:10px;
   margin-bottom:20px;
@@ -378,6 +342,7 @@ ul{
 }
 
 .flip-box-inner2 {
+  border-radius: 15px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -387,11 +352,13 @@ ul{
 }
 
 .flip-box2:hover .flip-box-inner2 {
+  border-radius: 15px;
   transform: rotateY(180deg);
 }
 
 
 .flip-box-front2, .flip-box-back2 {
+  border-radius: 15px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -400,6 +367,7 @@ ul{
 }
 
 .flip-box-front2 {
+  border-radius: 15px;
   background-color: #ffffff;
   color: black;
   border:none;
@@ -408,6 +376,7 @@ ul{
 
 
 .flip-box-back2 {
+  border-radius: 15px;
   background-color: #035623;
   color: white;
   transform: rotateY(180deg);
@@ -438,7 +407,8 @@ h5{
 }
 .button a:hover{
   animation:none;
-  background-color:#77d39a;
+  background-color: #2c28a0;
+  color:white;
 }
   @keyframes bounce{
     0% { transform:translate(0);}
