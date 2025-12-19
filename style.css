@@ -32,6 +32,7 @@ a {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      animation: flow_in_right 2s;
     }
     .navbar a {
       color: white;
@@ -52,6 +53,7 @@ a {
   padding: 1.8rem 7vw 1.2rem;
   background: #020817;
   color: rgba(148, 163, 184, 0.9);
+  animation:flow_in_left 2s;
 }
 
 .footer-main {
@@ -414,6 +416,31 @@ h5{
     0% { transform:translate(0);}
     40% { transform:translateY(-15px);}
 
+  }
+
+  @keyframes flow_in_right{
+    from {
+        
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+  }
+  @keyframes flow_in_left{
+    from {
+        
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
   }
 
 div.mycontainer {
