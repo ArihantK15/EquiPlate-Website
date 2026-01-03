@@ -35,15 +35,18 @@
         }
 
         .login-card {
-  background: rgb(242, 250, 238);
-  width: 100%;
-  max-width: 1200px;
-  min-height: 920px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex; 
-}
+          display:flex;
+          align-items:stretch;
+          background: rgb(242, 250, 238);
+          width: 100%;
+          max-width: 1200px;
+          max-height: 720px;
+          overflow: hidden;
+          border-radius: 12px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+          overflow: hidden;
+          display: flex; 
+        }
 
 
 .left-column {
@@ -51,6 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 1rem;
 }
 
 .logo-area {
@@ -82,6 +86,10 @@
 .right-column {
   flex: 1;
   padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: clamp(1rem, 3vw, 3rem);
 }
 
 .intro {
@@ -125,7 +133,7 @@
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .form-group label {
@@ -161,6 +169,10 @@
   cursor: pointer;
   margin-top:1rem;
 }
+.quote{
+  text-align:center;
+  color:var(--dark-green)
+}
 
     </style>
 </head>
@@ -168,7 +180,7 @@
 
     <header class="navbar">
     <div class="nav-brand">
-      <img src="logo.png" alt="EquiPlate logo" class="logo" />
+      <a href="main.html"><img src="logo.png" alt="EquiPlate logo" class="logo"></a>
       <span class="brand-name">EquiPlate</span>
     </div>
     <nav class="nav-links">
@@ -275,6 +287,10 @@
 
     </div>
   </div>
+</div>
+<div class="quote">
+  <h1> <q> <i>Food is the moral right of all who are born into this world.</i></q>
+<br>— Norman Borlaug</h1>
 </div>
 
     <footer class="footer">
