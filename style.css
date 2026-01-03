@@ -13,6 +13,7 @@ body {
   color: var(--text-main);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: #e9f7ee;
 }
 
 img {
@@ -401,10 +402,11 @@ h5{
   padding-top: 20px;
   padding-bottom: 20px;
   margin:50px;
-  position: relative;
+  position: absolute;
   background-color: #137d3c;
   font-size:32px;
   animation:bounce 2s infinite;
+  
 
 }
 .button a:hover{
@@ -441,6 +443,18 @@ h5{
         opacity: 1;
     }
     
+  }
+  @keyframes opening{
+    from {
+      transform: translateY(-500px);
+        opacity: 1;
+        padding:500px;
+
+    }
+    to {
+      transform: translateY(0);
+        opacity: 1;
+    }
   }
 
 div.mycontainer {
